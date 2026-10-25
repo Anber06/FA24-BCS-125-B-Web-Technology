@@ -1,33 +1,31 @@
-/* Padding and border are included in an element's width */
+/* Remove default spacing from all elements */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #2b2f33;
+  color: #333333;
   background-color: #f1f3f5;
 }
 
-ul {
-  list-style: none;
+a {
+  text-decoration: none;
 }
 
-/* Two columns: sidebar + main */
 .cv {
-  display: grid;
-  grid-template-columns: 270px 1fr;
-  max-width: 880px;
-  margin: 30px auto 0;
+  display: flex;
+  width: 880px;
+  margin: 30px auto;
   background-color: #ffffff;
-  border: 1px solid #d5d9dd;
+  border: 1px solid #cccccc;
 }
 
 /* ---------- Sidebar ---------- */
 aside {
+  width: 270px;
   padding: 32px 24px;
   background-color: #1c2b3a;
   color: #ffffff;
@@ -44,37 +42,25 @@ header img {
 
 header h1 {
   font-size: 23px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 header p {
   color: #b8c4d0;
 }
 
-aside section,
-nav {
+aside section {
   margin-bottom: 24px;
 }
 
 aside h2 {
   margin-bottom: 10px;
-  padding-bottom: 4px;
   border-bottom: 1px solid #4a5b6c;
-  font-size: 0.85rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  font-size: 16px;
 }
 
 aside li,
 aside article p {
-  font-size: 0.9rem;
-  overflow-wrap: anywhere;
-}
-
-aside li {
-  margin-bottom: 4px;
+  font-size: 14px;
 }
 
 aside a {
@@ -86,30 +72,17 @@ aside article {
 }
 
 aside h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 15px;
 }
 
 .date {
   color: #8d9aa7;
-  font-size: 0.85rem;
-}
- a{
-  text-decoration: none;
- }
-
-#languages ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 20px;
-  list-style: disc;
+  font-size: 14px;
 }
 
-#languages li {
-  width: 50%;
-}
 /* ---------- Main ---------- */
 main {
+  flex: 1;
   padding: 32px 36px;
 }
 
@@ -119,62 +92,40 @@ main section {
 
 main h2 {
   margin-bottom: 12px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #c9d1d9;
+  border-bottom: 1px solid #cccccc;
   color: #1c2b3a;
-  font-size: 0.95rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-/* Experience: date on the left, details on the right */
-main article {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 16px;
+  font-size: 17px;
 }
 
 main h3 {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 16px;
   color: #1c2b3a;
 }
 
 main .date {
-  color: #5f6b76;
+  color: #666666;
 }
 
-/* Skills and interests: plain two-column lists */
+table {
+  width: 100%;
+}
+
+td {
+  vertical-align: top;
+  padding: 0 16px 16px 0;
+}
+
+td.date {
+  width: 120px;
+}
+
+ul {
+  list-style: none;
+}
+
+#languages ul,
 #skills ul,
 #interest ul {
-  columns: 2;
-}
-
-#skills li,
-#interest li {
-  margin-left: 18px;
-  list-style: square;
-}
-
-/* ---------- Footer ---------- */
-footer {
-  max-width: 880px;
-  margin: 0 auto 30px;
-  padding: 12px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #5f6b76;
-}
-
-/* ---------- Small screens ---------- */
-@media (max-width: 700px) {
-  .cv {
-    grid-template-columns: 1fr;
-    margin-top: 0;
-  }
-
-  main article {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
+  padding-left: 20px;
+  list-style: disc;
 }
