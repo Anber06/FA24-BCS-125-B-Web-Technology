@@ -1,0 +1,227 @@
+/* ---------- General ---------- */
+body {
+  font-family: Poppins, Arial, sans-serif;
+  color: #121212;
+}
+h1, h2, h3 {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font: bold 15px Georgia, serif;
+}
+
+/* ---------- Header ---------- */
+header {
+  border-bottom: 1px solid #eee;
+  padding: 15px 5%;
+}
+.header-top {
+  display: grid;
+  grid-template-columns: 1fr 236px 1fr;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.logo img {
+  width: 100%;
+}
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ---------- Menu (Bootstrap navbar) ---------- */
+.navbar {
+  padding: 0;
+  overflow-x: auto;
+}
+.navbar-nav {
+  margin: 0 auto;
+}
+.nav-link {
+  color: #444;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Banner ---------- */
+.hero {
+  width: 100%;
+  display: block;
+  border-radius: 0 0 12px 12px;
+}
+
+/* ---------- Products ---------- */
+.products {
+  padding: 50px 0;
+}
+.products h2 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.acne {
+  background: #eef5ea;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.product a {
+  flex: 1;
+}
+.product img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.product h3 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin: 16px 0 8px;
+}
+.price {
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.product button {
+  padding: 12px;
+  border: 1px solid rgba(18, 18, 18, 0.5);
+  border-radius: 6px;
+  background: white;
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.product button:hover {
+  background: #121212;
+  color: white;
+}
+
+/* ---------- Product page ---------- */
+main.container {
+  margin-top: 20px;
+}
+.product-photo {
+  width: 100%;
+  border-radius: 12px;
+}
+.details .price {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.note {
+  font-size: 14px;
+  color: gray;
+}
+.benefits {
+  list-style: none;
+  padding: 0;
+}
+.sizes {
+  margin-bottom: 20px;
+}
+.sizes input {
+  display: none;
+}
+.sizes label {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 6px 18px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.sizes input:checked + label {
+  background: #121212;
+  color: white;
+}
+.details input[type="number"] {
+  display: block;
+  width: 100px;
+  padding: 8px;
+  margin: 5px 0 20px;
+  border: 1px solid #ccc;
+}
+.buy-btn {
+  width: 100%;
+  padding: 12px;
+  background: #121212;
+  color: white;
+  border: 1px solid #121212;
+  font-size: 16px;
+  cursor: pointer;
+}
+.buy-btn:hover {
+  background: white;
+  color: #121212;
+}
+.info {
+  margin-top: 30px;
+}
+.info h2 {
+  font-size: 20px;
+}
+.info p {
+  font-size: 14px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #f3f3f3;
+  margin-top: 50px;
+  padding: 40px 0 15px;
+}
+footer a {
+  display: block;
+  font-size: 14px;
+  color: rgba(18, 18, 18, 0.7);
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer p {
+  font-size: 14px;
+}
+.copyright {
+  text-align: center;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 575px) {
+  .header-top {
+    grid-template-columns: 1fr 160px 1fr;
+  }
+  .user-icon {
+    display: none;
+  }
+  .products h2 {
+    font-size: 30px;
+  }
+}
